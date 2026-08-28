@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Kareem Hussein — Personal Profile"
+description = "A calm, polished personal profile website presenting Kareem Hussein's experience, skills, education, and contact details from his CV."
+version = "1.0.0"
+id = "artifacts/kareem-profile"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22546
+
+[services.development]
+run = "pnpm --filter @workspace/kareem-profile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kareem-profile", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kareem-profile/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22546"
+BASE_PATH = "/"
