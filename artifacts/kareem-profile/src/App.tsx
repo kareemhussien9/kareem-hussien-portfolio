@@ -14,6 +14,7 @@ import {
   ExternalLink,
   GraduationCap,
   Linkedin,
+  Mail,
   MapPin,
   Menu,
   Network,
@@ -459,22 +460,36 @@ function Home() {
                 <div>
                   <p className="mb-5 flex items-center gap-2 font-mono-ui text-[10px] uppercase tracking-[.2em] text-[hsl(var(--accent))]"><span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--accent))]" /> Next chapter</p>
                   <h2 data-testid="text-contact-heading" className="max-w-[600px] font-display text-5xl leading-[.95] tracking-[-.055em] sm:text-7xl">Let&apos;s make something <span className="text-[hsl(var(--accent))]">dependable.</span></h2>
-                  <p className="mt-6 max-w-[480px] text-base leading-7 text-[hsl(var(--card)/.64)]">For a collaboration, a technical conversation, or simply a hello from a fellow builder — find me on LinkedIn.</p>
+                  <p className="mt-6 max-w-[480px] text-base leading-7 text-[hsl(var(--card)/.64)]">For a collaboration, a technical conversation, or a question about my work, reach out directly or connect with me on LinkedIn.</p>
                 </div>
-                <a
-                  href="https://linkedin.com/in/kareem-belal-hussien"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-testid="link-contact-linkedin"
-                  className="button-lift inline-flex w-fit items-center gap-3 rounded-full bg-[hsl(var(--accent))] px-5 py-3.5 text-sm font-semibold text-[hsl(var(--foreground))]"
-                >
-                  <Linkedin className="h-4 w-4" />
-                  Connect on LinkedIn
-                  <ExternalLink className="h-4 w-4" />
-                </a>
+                <div className="flex flex-col items-start gap-3">
+                  <a
+                    href="mailto:belalhussien74@gmail.com"
+                    data-testid="link-contact-email"
+                    className="button-lift inline-flex w-fit items-center gap-3 rounded-full bg-[hsl(var(--accent))] px-5 py-3.5 text-sm font-semibold text-[hsl(var(--foreground))]"
+                  >
+                    <Mail className="h-4 w-4" />
+                    Email me
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/kareem-belal-hussien"
+                    target="_blank"
+                    rel="noreferrer"
+                    data-testid="link-contact-linkedin"
+                    className="button-lift inline-flex w-fit items-center gap-3 rounded-full border border-[hsl(var(--card)/.25)] px-5 py-3.5 text-sm font-semibold text-[hsl(var(--card))]"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    Connect on LinkedIn
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
               <div className="relative mt-14 flex flex-col justify-between gap-4 border-t border-[hsl(var(--card)/.15)] pt-5 text-xs text-[hsl(var(--card)/.5)] sm:flex-row">
-                <span data-testid="text-footer-location" className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5" /> Jordan</span>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+                  <span data-testid="text-footer-location" className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5" /> Jordan</span>
+                  <a href="mailto:belalhussien74@gmail.com" data-testid="link-footer-email" className="flex items-center gap-2 transition-colors hover:text-[hsl(var(--card))]"><Mail className="h-3.5 w-3.5" /> belalhussien74@gmail.com</a>
+                </div>
                 <span className="font-mono-ui">Kareem Hussein · IoT &amp; Cybersecurity</span>
               </div>
             </div>
