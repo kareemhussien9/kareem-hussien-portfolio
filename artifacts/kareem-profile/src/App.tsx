@@ -217,7 +217,7 @@ function Home() {
             </div>
             <div className="mt-14 flex items-center gap-2 font-mono-ui text-[11px] uppercase tracking-[0.16em] text-[hsl(var(--muted-foreground))]">
               <MapPin className="h-3.5 w-3.5 text-[hsl(var(--accent))]" />
-              Irbid, Jordan
+              Jordan
             </div>
           </Reveal>
 
@@ -474,7 +474,7 @@ function Home() {
                 </a>
               </div>
               <div className="relative mt-14 flex flex-col justify-between gap-4 border-t border-[hsl(var(--card)/.15)] pt-5 text-xs text-[hsl(var(--card)/.5)] sm:flex-row">
-                <span data-testid="text-footer-location" className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5" /> Irbid, Jordan</span>
+                <span data-testid="text-footer-location" className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5" /> Jordan</span>
                 <span className="font-mono-ui">Kareem Hussein · IoT &amp; Cybersecurity</span>
               </div>
             </div>
